@@ -22,27 +22,42 @@ void insertion(Node* &head, Node* &tail, int data){
     }
 }
 
-int maxLen(Node* head){
-    int len = 0;
-    while(head!= nullptr){
-        len++;
-        head = head -> next;
-    }
+// int maxLen(Node* head){
+//     int len = 0;
+//     while(head!= nullptr){
+//         len++;
+//         head = head -> next;
+//     }
 
-    return len;
-}
+//     return len;
+// }
+
+// Node* midList(Node* head){
+//     int getLen = maxLen(head);
+//     int ans = getLen/2;
+
+//     Node* temp = head;
+//     int cnt = 0;
+//     while(cnt < ans){
+//         temp = temp -> next;
+//         cnt++;
+//     }
+//     return temp;
+// }
 
 Node* midList(Node* head){
-    int getLen = maxLen(head);
-    int ans = getLen/2;
+    Node* slow = head;
+    Node* fast = head;
 
-    Node* temp = head;
-    int cnt = 0;
-    while(cnt < ans){
-        temp = temp -> next;
-        cnt++;
+    if(head == nullptr || head -> next == nullptr)
+    return head;
+
+    while(fast -> next!= nullptr && fast -> next -> next != nullptr){
+        slow = slow -> next;
+        fast = fast ->next -> next;
     }
-    return temp;
+    return slow;
+
 }
 
 void traverse(Node* head){
@@ -69,3 +84,4 @@ int main(){
      Node* temp = midList(head);
      cout<<temp->data;
 }
+
