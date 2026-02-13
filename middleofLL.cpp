@@ -60,14 +60,14 @@ Node* midList(Node* head){
 
 }
 
-void traverse(Node* head){
-    Node* temp = head;
-    while (temp != nullptr)
-    { 
-        cout<<temp->data<<" ";
-        temp = temp -> next;
-    }
-}
+// void traverse(Node* head){
+//     Node* temp = head;
+//     while (temp != nullptr)
+//     { 
+//         cout<<temp->data<<" ";
+//         temp = temp -> next;
+//     }
+// }
 
 
 int main(){

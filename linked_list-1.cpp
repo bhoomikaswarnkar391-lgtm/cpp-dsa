@@ -1,6 +1,7 @@
 #include<iostream>
 using namespace std;
 
+//structure of the node
 struct Node{
     int data;
     Node* next;
@@ -34,6 +35,7 @@ void insertMid(int pos, Node* &head, int data){
         return ;
     }
 
+    //finding the total lenght of the list 
     Node* temp = head;
     int cnt = 1;
     while(cnt < pos-1){
@@ -41,6 +43,7 @@ void insertMid(int pos, Node* &head, int data){
         cnt++;
     }
 
+    //insertion of the node of the given position
     Node* insertNode = new Node(data);
     insertNode -> next = temp -> next;
     temp -> next = insertNode;
