@@ -83,3 +83,21 @@ for(int i =0; i<n2; i++){
  
 }
 
+
+
+// if(head == nullptr ) return head; 
+
+    //  ListNode* curr = head;
+    //  ListNode* temp = nullptr;
+    //  curr = reverse(curr);
+     
+    //  for(int i=1; i<n; i++){
+    //     curr = curr -> next;
+    //     temp = curr -> next;
+    //  }
+    //  delete curr;
+    // head -> next = temp;
+
+    // head = reverse(head);
+    // return head;
+    // }
